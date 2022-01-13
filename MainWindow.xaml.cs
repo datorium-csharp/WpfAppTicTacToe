@@ -40,8 +40,8 @@ namespace WpfAppTicTacToe
             if(tb.Text != "X" && tb.Text != "O")
             {
                 tb.Text = turn;
-                SwitchTurn();
                 CheckForWin();
+                SwitchTurn();                
             }       
         }
 
@@ -101,6 +101,11 @@ namespace WpfAppTicTacToe
                 tb3.Foreground = tb5.Foreground = tb7.Foreground = winColor;
                 GameOver();
             }
+        }
+
+        private void ResetGame()
+        {
+            tb1.Text = "   ";
         }
 
         private void GameOver()
